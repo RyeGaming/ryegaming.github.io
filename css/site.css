@@ -1,0 +1,195 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body{
+  background: rgb(51,3,155);
+  background: linear-gradient(0deg, rgba(51,3,155,1) 0%, rgba(50,57,130,1) 22%, rgba(14,5,49,1) 100%);
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+  /* font-size: 1.2em; */
+  font-family: "Plus Jakarta Sans";
+  font-weight: lighter;
+  color: #F6FBFC;
+  text-shadow: #89C4E0 1px 1px 4px;
+}
+
+
+
+p{
+  margin: 0;
+  padding: 0;
+  /* font-size: 1.2em; */
+  font-family: "Inter";
+  font-weight: 300;
+  color: #F6FBFC;
+  text-shadow: #89C4E0 1px 1px 4px;
+
+}
+
+i{
+  margin: 0;
+  padding: 0;
+  /* font-size: 1.2em; */
+  font-family: "Inter";
+  font-weight: 300;
+  color: #F6FBFC;
+  text-shadow: #89C4E0 1px 1px 4px;
+
+}
+
+#content {
+  width: 100vw;
+  margin: 0px;
+  padding: 0px;
+  justify-content: center;
+  font-family: sans-serif;
+}
+
+.circle-img {
+
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    object-fit: none;
+    object-position: 0% 40%;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #081927;
+  overflow: hidden;
+  width: 120%;
+  margin-left: -0.6%;
+  margin-right: -10%;
+  margin-top: 0%;
+  position: fixed;
+  top: 0;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: inline-start ;
+  color: #F6FBFC;
+  font-family: "Inter";
+  font-weight: 300;
+  text-align: center;
+  padding: 0.75% 2%;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:visited{
+    color: #F6FBFC;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #F6FBFC;
+  color: #03070B;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #194F70;
+  color: #89C4E0;
+}
+
+
+.minor-section {
+  
+  width: 65%;
+}
+
+.minor-section h2 {
+  font-size: 1.2em;
+}
+
+.portait-section {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: center;
+  width: 30%;
+}
+
+.portait-section h1{
+    justify-content: center;
+}
+
+.clickable-icon{
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: auto;
+
+}
+.link-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  width: 5%;
+  
+}
+
+#footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: #03070B;
+  color: gray;
+  padding-top: 2%;
+  padding-bottom: 3%;
+  text-align: center;
+  font-family: "verdana", sans-serif;
+
+}
+
+.portait-section h2{
+  font-size: 1.2em;
+}
+
+/* Set the image to be responsive */
+.image-wrapper img {
+    aspect-ratio: 1/1;
+    width: 80%;
+    object-fit: cover;
+    overflow: hidden;
+    justify-content: right;
+}
+
+/* Set the canvas element to be the full size of the container */
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.fullscreen-box {
+  display: flex;
+  justify-content: flex-end; /* Aligns the button to the right */
+  margin-top: 0.25em;
+}
+
+.fullscreen-box button {
+  font-size: 0.6em;
+}
+
+
+
+
+body.is-fullscreen #canvas-container {
+  position: fixed; /* Use 'fixed' instead of 'absolute' to ensure it covers the entire screen */
+  top: 0;
+  left: 0; /* Add 'left: 0' to align it properly to the top-left corner */
+  width: 100vw !important;
+  height: 100vh !important;
+  margin: 0; /* Remove any default margins */
+  z-index: 1000; /* Ensure it's above other content */
+}
