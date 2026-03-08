@@ -2,8 +2,8 @@
 
 .two-column {
   padding: 5%;
-  padding-top: 10%;
-  padding-bottom: 20%;
+  padding-top: 8%;
+  padding-bottom: 1%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -33,19 +33,28 @@
 
 /* Slideshow container */
 .slideshow-container {
+  
   max-width: 800px;
   height: 480px;
   position: relative;
   margin: auto;
+  background: rgb(0, 0, 0, 0.3);
 }
 
 /* Hide the images by default */
 .mySlides {
-  display: block;
+  display: flex;
+  justify-content: center;   /* horizontal center */
+  align-items: center;       /* vertical center */
+  height: 100%;    
 }
 
 .mySlides img{
-  max-height: 480px;
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  margin:auto;
 }
 
 

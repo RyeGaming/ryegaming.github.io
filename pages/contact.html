@@ -18,34 +18,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 	<!-- Link to javascript file - DEFER waits until all elements are rendered -->
     <script type="text/javascript" src="../js/slideshow.js"></script>
+    <script>
+        function sendToGmail() {
+            // Get values from inputs
+            const myEmail = "bhudickbusiness@gmail.com";
+            const username = document.getElementById("username").value.trim();
+            const message = document.getElementById("message").value.trim();
 
+            // Basic validation
+            if (!username || !message) {
+                return;
+            }
+
+            // Encode values for URL
+            const subject = encodeURIComponent("Message from " + username);
+            const body = encodeURIComponent(message);
+
+            // Gmail compose link
+            const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(myEmail)}&su=${subject}&body=${body}`;
+
+            window.open(gmailURL, "_blank");
+        }
+    </script>
 </head>
 <body>
     <div class="topnav">
         <a href="../index.html">Home</a>
         <a href="#news">Projects</a>
-        <a href="../pages/contact.html">Contact</a>
-        <a class="active" href="../pages/about.html">About</a>
+        <a class="active"href="../pages/contact.html">Contact</a>
+        <a href="../pages/about.html">About</a>
     </div>
 
 	<!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
 	<main id="content">
 		<section class="two-column">
 			<div class="minor-section">
-					
-                    <p>Brian Hudick is a junior technical artist specializing in both<br>
-                        3D prop and character creation as well as animation rig building<br>
-                        for video games and realtime applications. With education in Computer<br>
-                        Science and Game Design from the University of California, Santa Cruz <br>
-                        and preproduction experience under Tech Guide Blogs, he's ready for production.<br><br>
-
-                        Working as a student assistance specialist under UCSC's Veterans' Resource<br>
-                        center while studying for his bachelor's degree, he's graduating in June 2026.<br>
-                        He's seeking to break into the business to create stylized characters and props.<br>
-                        Heavily experienced in Unity, Maya, Substance Painter 3D, and of course Blender, <br>
-                        he understands the production pipeline of assets to make the creation and <br>
-                        implementation from sculpt to gameplay as smooth as can be.
-                    </p>
+					<h1>Contact Me</h1><br>
+                    <h2>I'd love to talk with you, business only please.</h2><br>
+                    <label for="Email">Email:</label><br>
+                    <input type="text" id="username" name="username" placeholder="Enter your email here" required>
+                    <form>
+                     <!-- Multi-line text area -->
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" rows="4" cols="40" placeholder="Type your message here..."></textarea>
+                    </form>
+                    <button type="button" onclick="sendToGmail()">Send Email</button>
 			</div>
             <div class="slideshow-container">
 
