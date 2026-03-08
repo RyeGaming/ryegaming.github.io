@@ -128,8 +128,16 @@ i{
     aspect-ratio: 1/1;
     width: 100%;
     height: auto;
-
+    transition: 0.1s;
 }
+
+.clickable-icon:hover {
+  transform: translateY(-2px);
+  border-radius: 90%;        /* Makes it a circle */
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3); /* Horizontal, vertical, blur, color */
+  scale: 1.1;
+}
+
 .link-section {
   display: flex;
   justify-content: center;

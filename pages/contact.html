@@ -11,7 +11,7 @@
 	<!-- Include a sitewide CSS file for consistent styling across the site -->
 	<link rel="stylesheet" type="text/css" href="../css/site.css">
 	<!-- Experiment-specifc CSS file for any special styling of this particular page -->
-	<link rel="stylesheet" type="text/css" href="../css/about.css">
+	<link rel="stylesheet" type="text/css" href="../css/contact.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,6 +24,7 @@
             const myEmail = "bhudickbusiness@gmail.com";
             const username = document.getElementById("username").value.trim();
             const message = document.getElementById("message").value.trim();
+            const subjectLine = document.getElementById("subject").value.trim();
 
             // Basic validation
             if (!username || !message) {
@@ -31,7 +32,7 @@
             }
 
             // Encode values for URL
-            const subject = encodeURIComponent("Message from " + username);
+            const subject = encodeURIComponent(subjectLine + " from " + username);
             const body = encodeURIComponent(message);
 
             // Gmail compose link
@@ -62,6 +63,7 @@
                      <!-- Multi-line text area -->
                         <br>
                         <p for="message">Message:</p><br>
+                        <input type="text" id="subject" name="subject" placeholder="Subject line" required>
                         <textarea id="message" name="message" rows="4" cols="40" placeholder="Type your message here..."></textarea>
                     </form>
                     <button type="button" onclick="sendToGmail()">Send Email</button>
