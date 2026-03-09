@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- This title is used for tabs and bookmarks -->
+	<title>Procedural Sky Generator</title>
+
+	<!-- Use UTF character set, a good idea with any webpage -->
+	<meta charset="UTF-8" />
+	<!-- Set viewport so page remains consistently scaled w narrow devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Include CSS file, including a site-wide CSS and for this particular page -->
+	<link rel="stylesheet" type="text/css" href="../css/site.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- Load jQuery library -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+	<!-- Load p5.js library -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.9.2/lib/p5.js"></script>
+
+	<!-- Link to javascript files - DEFER waits until all elements are rendered -->    <!-- <script type="text/javascript" src="../js/site.js" DEFER></script> -->   
+    <script src="js/xxhash.min.js" defer></script>
+	<script src="js/stars.js" defer></script>
+    <script src="js/engine.js" defer></script>
+    <script src="js/sky_gradient.js" defer></script>
+	<script src="js/grass.js" defer></script>
+
+</head>
+<body>
+	<!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
+	<main id="content">
+		<section>
+
+			<h1>CMPM 147 Final Project</h1>
+
+			<div class="minor-section">
+			<h2>Procedural Sky Generator</h2>
+
+			<!-- FLEX CONTAINER -->
+			<div class="main-layout">
+				<div id="canvas-container">
+				<!-- canvas goes here -->
+				</div>
+
+				<div class="settings-panel">
+					<h2>Settings</h2>
+					<div>
+						World seed: <input type="text" id="world-seed" value="xyzzy">
+						<button id="generate-button">Generate New Seed</button>
+					</div>
+					<!-- You can add more settings here -->
+					<div class="slidecontainer">
+						<br><dt id = "sliderText">Time Slider</DT>
+						<input type="range" min="1" max="70" value="0" class="slider" id="offsetSlider"><br>
+						Grass Color: <input type="color" id="grassColorPicker" value="#969900">
+						<br><br>
+						Enable Stars: <input type="checkbox" id="starsCheckbox" checked><br>
+						Star Count: <input type="range" min = "0" max = "200" value = "0" class="slider" id="starSlider">  <SPAN id = "starCountText">0</span><br><br>
+
+						Sky Gradient: <input type="color" id="skyGradientColorPicker0" value="#162581"><input type="color" id="skyGradientColorPicker1" value="#213193">
+						<input type="color" id="skyGradientColorPicker2" value="#3a48a0"><br>
+						Sunset: <input type="color" id="sunsetGradientColorPicker0" value="#9c56ac"><input type="color" id="sunsetGradientColorPicker1" value="#cb72a2">
+						<input type="color" id="sunsetGradientColorPicker2" value="#f9a835"> <input type="color" id="sunsetGradientColorPicker3" value="#f56c24"><br>
+
+						<br>Moon Count: <input type="range" min = "0" max = "4" value = "1" class="slider" id="moonSlider">  <SPAN id = "moonCountText">1</span><br>
+
+						<br>Planetary Rotation: <input type="checkbox" id="planetaryRotationCheckbox" checked><br>
+						Rotation Speed: <input type="range" min = "-100" max = "100" value = "5" class="slider" id="planetaryRotationSlider">  <SPAN id = "planetaryRotationSpeedText">0.05</span><br>
+						<br><br><br> <input type="button" id="saveButton" value="Save Image">
+					</div>
+				</div>
+			</div>
+			</div>
+
+
+			<div class="minor-section two-columns">
+                <div class="showcase-img">
+                </div>
+
+		</section>
+		
+	</main>
+</body>
+</html>

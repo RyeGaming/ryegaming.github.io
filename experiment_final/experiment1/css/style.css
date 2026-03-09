@@ -1,0 +1,34 @@
+/* style.css */
+
+/* Set the canvas element to be the full size of the container */
+canvas {
+    width: 100%;
+    height: 100%;
+}
+
+/* Center the canvas element on the page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-layout {
+  display: flex;
+  width: 100%;
+  height: 600px; /* or adjust to your layout needs */
+}
+
+#canvas-container {
+  width: 80%;
+  position: relative;
+}
+
+.settings-panel {
+  width: 20%;
+  height: relative;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #8f8f8f; /* light gray for visibility */
+  border-left: 1px solid #ccc;
+}
